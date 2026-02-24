@@ -1,279 +1,245 @@
 // IBM Vault radial mindmap data source.
-// Replace this object with your own hierarchy while preserving field names.
+// Interactive Sales Tool Version
+
 window.VAULT_MINDMAP_DATA = {
   title: "IBM Vault",
-  shortTitle: "IBM Vault",
+  shortTitle: "Vault",
   type: "root",
   summary:
-    "Secure enterprise vault platform for sensitive data governance, encryption, access controls, and compliance automation.",
+    "Centralized secrets and encryption platform for modern applications.",
   children: [
     {
-      title: "Security & Encryption",
-      shortTitle: "Security",
+      title: "Secrets Management",
+      shortTitle: "Secrets",
       type: "category",
-      summary: "Protection controls that secure data at rest, in transit, and during access.",
+      summary:
+        "Securely store and dynamically manage application credentials and sensitive data.",
       children: [
         {
-          title: "Key Management",
-          shortTitle: "Key Mgmt",
+          title: "Centralized Secrets Storage",
+          shortTitle: "Central Store",
           type: "feature",
-          summary: "Centralized lifecycle controls for encryption keys and automated rotation.",
+          summary:
+            "Securely store passwords, API keys, and tokens in one controlled platform.",
           children: [
             {
-              title: "HSM-backed key storage",
-              shortTitle: "HSM",
+              title: "Microservices Password Control",
+              shortTitle: "Example",
               type: "example",
-              summary: "Store and protect root keys inside certified hardware security modules."
-            },
-            {
-              title: "Automated key rotation policies",
-              shortTitle: "Rotation",
-              type: "example",
-              summary: "Define periodic or event-driven rotation with zero-touch operations."
+              summary:
+                "A bank running 500 microservices can centrally update database passwords without redeploying applications."
             }
           ]
         },
         {
-          title: "Data Encryption",
-          shortTitle: "Encryption",
+          title: "Dynamic Secrets",
+          shortTitle: "Dynamic",
           type: "feature",
-          summary: "Comprehensive encryption coverage across structured and unstructured data.",
+          summary:
+            "Generate short-lived credentials that automatically expire.",
           children: [
             {
-              title: "Field-level encryption",
-              shortTitle: "Field-level",
+              title: "Temporary Production Access",
+              shortTitle: "Example",
               type: "example",
-              summary: "Protect sensitive fields such as PII while keeping non-sensitive data queryable."
-            },
-            {
-              title: "Tokenization",
-              shortTitle: "Tokenization",
-              type: "example",
-              summary: "Replace sensitive values with reversible or irreversible tokens."
+              summary:
+                "Vault creates a database account valid for 30 minutes, then automatically revokes it."
             }
           ]
         },
         {
-          title: "Access Hardening",
-          shortTitle: "Hardening",
+          title: "Automated Secret Rotation",
+          shortTitle: "Rotation",
           type: "feature",
-          summary: "Mechanisms that reduce risk from compromised identities or endpoints.",
+          summary:
+            "Automatically rotates database passwords and cloud credentials.",
           children: [
             {
-              title: "MFA policy enforcement",
-              shortTitle: "MFA",
+              title: "Compliance-Driven Password Changes",
+              shortTitle: "Example",
               type: "example",
-              summary: "Require adaptive MFA before privileged vault operations are executed."
-            },
-            {
-              title: "Session anomaly detection",
-              shortTitle: "Anomaly",
-              type: "example",
-              summary: "Continuously detect unusual behavior and automatically step up controls."
+              summary:
+                "A company must rotate credentials monthly — Vault handles it automatically without downtime."
             }
           ]
         }
       ]
     },
     {
-      title: "Access Management",
-      shortTitle: "Access",
+      title: "Encryption & Key Management",
+      shortTitle: "Crypto",
       type: "category",
-      summary: "Granular identity and permission controls for applications, teams, and workflows.",
+      summary:
+        "Protect sensitive data through centralized encryption and lifecycle-controlled keys.",
       children: [
         {
-          title: "Role-Based Access Control",
-          shortTitle: "RBAC",
+          title: "Encryption as a Service",
+          shortTitle: "Encrypt API",
           type: "feature",
-          summary: "Assign least-privilege permissions by business role and context.",
+          summary:
+            "Applications encrypt data via API without managing encryption keys.",
           children: [
             {
-              title: "Predefined security roles",
-              shortTitle: "Role Sets",
+              title: "Credit Card Protection",
+              shortTitle: "Example",
               type: "example",
-              summary: "Accelerate onboarding with curated role templates for common functions."
-            },
-            {
-              title: "Delegated admin scopes",
-              shortTitle: "Delegation",
-              type: "example",
-              summary: "Distribute administration without exposing global superuser privileges."
+              summary:
+                "An e-commerce platform encrypts credit card data by calling Vault APIs instead of building custom encryption logic."
             }
           ]
         },
         {
-          title: "Secrets Management",
-          shortTitle: "Secrets",
+          title: "Key Lifecycle Management",
+          shortTitle: "Key Lifecycle",
           type: "feature",
-          summary: "Secure storage and dynamic delivery of API keys, credentials, and certificates.",
+          summary:
+            "Centralized control, rotation, and auditing of encryption keys.",
           children: [
             {
-              title: "Dynamic database credentials",
-              shortTitle: "Dynamic DB",
+              title: "90-Day Key Rotation",
+              shortTitle: "Example",
               type: "example",
-              summary: "Generate short-lived credentials on demand to limit blast radius."
-            },
-            {
-              title: "Automated certificate issuance",
-              shortTitle: "Certs",
-              type: "example",
-              summary: "Provision and renew TLS certificates with policy-based automation."
+              summary:
+                "A financial institution rotates encryption keys every 90 days to meet regulatory requirements."
             }
           ]
         },
         {
-          title: "Privileged Access Workflow",
-          shortTitle: "PAM",
+          title: "HSM Integration",
+          shortTitle: "HSM",
           type: "feature",
-          summary: "Control high-risk operations through approvals and full activity visibility.",
+          summary:
+            "Integrates with Hardware Security Modules for high-assurance key protection.",
           children: [
             {
-              title: "Just-in-time access approvals",
-              shortTitle: "JIT",
+              title: "Banking-Grade Compliance",
+              shortTitle: "Example",
               type: "example",
-              summary: "Grant elevated access only for approved windows and specific tasks."
-            },
-            {
-              title: "Session recording",
-              shortTitle: "Recording",
-              type: "example",
-              summary: "Capture and audit privileged sessions for forensic and compliance needs."
+              summary:
+                "A payment processor integrates Vault with HSM to meet strict financial security standards."
             }
           ]
         }
       ]
     },
     {
-      title: "Compliance & Governance",
-      shortTitle: "Compliance",
+      title: "Identity & Access Control",
+      shortTitle: "Identity",
       type: "category",
-      summary: "Policy controls and reporting that align vault operations with regulations.",
+      summary:
+        "Granular identity-based access policies for applications and users.",
       children: [
         {
-          title: "Audit & Monitoring",
+          title: "Enterprise Identity Integration",
+          shortTitle: "Identity Sync",
+          type: "feature",
+          summary:
+            "Integrates with LDAP, Active Directory, OIDC, and Kubernetes.",
+          children: [
+            {
+              title: "AD-Based Access Control",
+              shortTitle: "Example",
+              type: "example",
+              summary:
+                "Engineers log in using company AD credentials and access only approved secrets."
+            }
+          ]
+        },
+        {
+          title: "Policy-Based Access Governance",
+          shortTitle: "Policies",
+          type: "feature",
+          summary:
+            "Granular policies define who can access which secrets.",
+          children: [
+            {
+              title: "Production vs Staging Control",
+              shortTitle: "Example",
+              type: "example",
+              summary:
+                "Developers can access staging secrets but are blocked from production credentials."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: "PKI & Certificate Management",
+      shortTitle: "PKI",
+      type: "category",
+      summary:
+        "Automated issuance and lifecycle management of TLS certificates.",
+      children: [
+        {
+          title: "Automated Certificate Issuance",
+          shortTitle: "Certificates",
+          type: "feature",
+          summary:
+            "Automatically generates and manages TLS certificates.",
+          children: [
+            {
+              title: "Kubernetes TLS Automation",
+              shortTitle: "Example",
+              type: "example",
+              summary:
+                "Vault automatically issues and renews certificates for hundreds of containerized services."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: "Platform & DevOps Integration",
+      shortTitle: "Platform",
+      type: "category",
+      summary:
+        "Multi-cloud deployment, container integration, and operational visibility.",
+      children: [
+        {
+          title: "Kubernetes Integration",
+          shortTitle: "K8s",
+          type: "feature",
+          summary:
+            "Injects secrets securely into containers at runtime.",
+          children: [
+            {
+              title: "CI/CD Secret Injection",
+              shortTitle: "Example",
+              type: "example",
+              summary:
+                "Containers retrieve secrets dynamically during deployment without embedding them in images."
+            }
+          ]
+        },
+        {
+          title: "Multi-Cloud & Hybrid Deployment",
+          shortTitle: "Multi-Cloud",
+          type: "feature",
+          summary:
+            "Deploy Vault consistently across AWS, Azure, GCP, and on-prem.",
+          children: [
+            {
+              title: "Cross-Cloud Central Control",
+              shortTitle: "Example",
+              type: "example",
+              summary:
+                "An enterprise operating across AWS and Azure uses Vault as a centralized secrets layer."
+            }
+          ]
+        },
+        {
+          title: "Audit Logging",
           shortTitle: "Audit",
           type: "feature",
-          summary: "Immutable logs and observability tools to track all vault interactions.",
+          summary:
+            "Comprehensive logging of secret access and key usage.",
           children: [
             {
-              title: "Tamper-evident audit trails",
-              shortTitle: "Audit Trail",
+              title: "Regulatory Audit Reporting",
+              shortTitle: "Example",
               type: "example",
-              summary: "Maintain cryptographically verifiable logs for regulator confidence."
-            },
-            {
-              title: "SIEM integrations",
-              shortTitle: "SIEM",
-              type: "example",
-              summary: "Forward high-fidelity events to enterprise monitoring pipelines."
-            }
-          ]
-        },
-        {
-          title: "Policy Enforcement",
-          shortTitle: "Policy",
-          type: "feature",
-          summary: "Centralized guardrails to ensure consistent data handling and retention.",
-          children: [
-            {
-              title: "Geofencing controls",
-              shortTitle: "Geofencing",
-              type: "example",
-              summary: "Restrict vault usage based on jurisdiction and data residency rules."
-            },
-            {
-              title: "Retention and purge lifecycle",
-              shortTitle: "Retention",
-              type: "example",
-              summary: "Automate retention windows and defensible deletion procedures."
-            }
-          ]
-        },
-        {
-          title: "Regulatory Readiness",
-          shortTitle: "Readiness",
-          type: "feature",
-          summary: "Capabilities mapped to controls used by global privacy and security standards.",
-          children: [
-            {
-              title: "GDPR data handling controls",
-              shortTitle: "GDPR",
-              type: "example",
-              summary: "Operationalize consent, minimization, and right-to-erasure requirements."
-            },
-            {
-              title: "SOC 2 evidence exports",
-              shortTitle: "SOC 2",
-              type: "example",
-              summary: "Generate auditor-ready reports showing control effectiveness."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      title: "Operations & Integration",
-      shortTitle: "Operations",
-      type: "category",
-      summary: "Deployment, scalability, and ecosystem integrations for enterprise adoption.",
-      children: [
-        {
-          title: "Platform Integration",
-          shortTitle: "Integration",
-          type: "feature",
-          summary: "Connect IBM Vault to CI/CD, IAM, cloud, and service platforms.",
-          children: [
-            {
-              title: "Kubernetes sidecar injection",
-              shortTitle: "K8s",
-              type: "example",
-              summary: "Deliver secrets to workloads securely through sidecar agents."
-            },
-            {
-              title: "CI/CD secret retrieval",
-              shortTitle: "CI/CD",
-              type: "example",
-              summary: "Inject ephemeral secrets into build pipelines without hardcoding."
-            }
-          ]
-        },
-        {
-          title: "Scalability & Reliability",
-          shortTitle: "Scalability",
-          type: "feature",
-          summary: "Architectural controls for high availability and predictable performance.",
-          children: [
-            {
-              title: "Multi-region replication",
-              shortTitle: "Replication",
-              type: "example",
-              summary: "Replicate vault state across regions to improve resilience and locality."
-            },
-            {
-              title: "Auto-healing clusters",
-              shortTitle: "Auto-heal",
-              type: "example",
-              summary: "Recover from node failures with minimal manual intervention."
-            }
-          ]
-        },
-        {
-          title: "Operational Intelligence",
-          shortTitle: "Insights",
-          type: "feature",
-          summary: "Dashboards and analytics that help teams optimize vault usage and cost.",
-          children: [
-            {
-              title: "Usage trend dashboards",
-              shortTitle: "Dashboards",
-              type: "example",
-              summary: "Track growth, request volume, and policy violations in real time."
-            },
-            {
-              title: "Capacity forecasting",
-              shortTitle: "Forecast",
-              type: "example",
-              summary: "Predict infrastructure needs from historical demand and planned growth."
+              summary:
+                "Vault provides full access logs to satisfy compliance investigations."
             }
           ]
         }
