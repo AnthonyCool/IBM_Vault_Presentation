@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBM Vault | Interactive Mindmap</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <div class="slide-shell">
+            <header class="slide-header">
+              <h1>IBM Vault Solution Mindmap</h1>
+              <p>Interactive sales narrative: explore capabilities, features, and use-case examples.</p>
+            </header>
+
+            <div id="mindmap-container" aria-label="IBM Vault radial mindmap container">
+              <svg id="mindmap-svg" aria-label="IBM Vault radial mindmap"></svg>
+            </div>
+
+            <aside id="detail-panel" aria-live="polite">
+              <h2 id="panel-title"></h2>
+              <p id="panel-summary"></p>
+              <p class="detail-type">Type: <span id="panel-type"></span></p>
+            </aside>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <script src="js/vault-data.js"></script>
+    <script src="js/reveal-init.js"></script>
+    <script src="js/mindmap.js"></script>
+  </body>
+</html>
